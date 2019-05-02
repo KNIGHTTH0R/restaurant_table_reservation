@@ -1,0 +1,11 @@
+body td:not(.unselectable):hover {
+    background-color: skyblue;
+}
+
+body td.unselectable {
+    background-color: grey;
+}
+
+.td-active {
+    background-color: darkcyan;
+}
