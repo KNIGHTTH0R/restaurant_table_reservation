@@ -1,0 +1,13 @@
+DB : restaurant_reservation
+CREATE TRIGGER use_meja AFTER INSERT ON pesanan
+FOR EACH ROW
+UPDATE meja SET `Status` = 'terpakai' WHERE Kodemeja = NEW.Kodemeja
+
+DB : restaurant_reservation2
+CREATE TRIGGER meja_terpakai AFTER INSERT ON `pemesanan`
+FOR EACH ROW
+UPDATE `meja` SET `status` = 'terpakai' WHERE `kode_meja` = NEW.kode_meja
+
+CREATE TRIGGER transaksi_sukses AFTER INSERT ON `transaksi`
+FOR EACH ROW
+UPDATE `pemesanan` SET `status` = 'selesai' WHERE `id_pemesanan` = NEW.id_pemesanan

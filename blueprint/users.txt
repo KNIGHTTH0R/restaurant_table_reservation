@@ -1,0 +1,11 @@
+username : administrator
+password : administrator
+
+username : waiter
+password : waiter
+
+username : kasir
+password : kasir
+
+username : owner
+password : owner
